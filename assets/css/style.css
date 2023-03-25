@@ -8,10 +8,24 @@
     --size-2: 2rem;
 }
 
-.active-class,
+.black-body{
+    background-color: var(--main-black);
+}
+
+.black-active_class,
 .nav-links li:hover{
     padding-bottom: 5px;
     border-bottom: 1.5px solid var(--main-black);
+}
+
+.white-active_class,
+.white-hover li:hover{
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid var(--main-white);
+}
+
+.white-text{
+    color: var(--main-white);
 }
 
 .active-category{
@@ -40,6 +54,22 @@
     margin: 0 auto;
 }
 
+.scroll-top__active{
+    background: #3a3a3a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    transform: rotate(-90deg);
+    right: 30px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* header */
 header{
     position: relative;
@@ -62,7 +92,14 @@ header nav  .nav-links{
 
 header nav .nav-links li a{
     font-size: 1.2rem;
+}
+
+.black-text li a{
     color: var(--main-black);
+}
+
+.white-text li a{
+    color: var(--main-white);
 }
 
 header nav .burger{
@@ -292,6 +329,55 @@ header nav .burger > div{
     height: 4px;
     background-color: var(--main-black);
     margin: 0.3rem 0;
+}
+
+/* sign  in page */
+.sign_in-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0 8rem 0;
+}
+
+.log_in{
+    border: 1px solid var(--main-white);
+    width: 49.5%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.log_in h1{
+    text-transform: uppercase;
+    font-size: var(--size-2);
+    font-weight: var(--weight-700);
+    margin: 3rem 0 2rem 0;
+}
+
+.log_in p{
+    padding: 0 17%;
+}
+
+.log_in form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px 0 120px 0;
+}
+
+.log_in form input{
+    background-color: var(--main-black);
+    border: 1px solid var(--main-white);
+    padding: 26px 0 26px 1rem;
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+.log_in form input::placeholder{
+    color: var(--main-white);
+    text-transform: uppercase;
+}
+
+.sign_in-img{
+    width: 49.5%;
 }
 
 /* footer */
@@ -588,6 +674,22 @@ footer{
 
     .product-burger__active div:nth-child(3){
         transform: rotateZ(-45deg) translateY(-13px);
+    }
+
+    .sign_in-section{
+        flex-direction: column;
+    }
+
+    .log_in{
+        width: 100%;
+    }
+
+    .log_in h1{
+        font-size: var(--size-1_5);
+    }
+
+    .sign_in-img{
+        display: none;
     }
 }
 
