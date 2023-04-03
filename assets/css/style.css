@@ -90,8 +90,8 @@ header nav  .nav-links{
     height: 25px;
 }
 
-header nav .nav-links li a{
-    font-size: 1.2rem;
+.nav-links a{
+    font-size: var(--size-1_5);
 }
 
 .black-text li a{
@@ -134,6 +134,144 @@ header nav .burger > div{
     right: 10px;
     top: -1px;
     transform: translateY(50%);
+}
+
+/* home page */
+/* home title section */
+.home-title-section{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.home-title img{
+    width: 100%;
+}
+
+.motto{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+}
+
+.motto img{
+    width: 10%;
+}
+
+.motto p{
+    font-size: var(--size-2);
+    font-weight: var(--weight-700);
+    text-transform: uppercase;
+}
+
+.motto p span{
+    color: red;
+    -webkit-text-stroke: 0.1rem var(--main-white);
+}
+
+.air-max-plus{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.two-hundred{
+    font-size: var(--size-2);
+}
+
+.home-title_button button{
+    border: 1px solid #F30404;
+    padding: 14px 23px;
+    margin:27px 20px 8rem 0 ;
+}
+
+/* special offer section */
+.special-offer-section{
+    background-image: url(../images/home_page/Rectangle\ 114.png);
+    width: 100%;
+    height: 812px;
+    text-align: center;
+}
+
+.special-offer-section h2{
+    text-transform: uppercase;
+    padding: 128px 0 64px 0;
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.special-offer-section p{
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.special-offer-section button{
+    background-color: var(--main-black);
+    color: var(--main-white);
+    padding: 20px 50.5px;
+    border-radius: 10px;
+    margin: 380px 0 65px 0;
+    font-weight: var(--weight-700);
+}
+
+/* new trends section */
+.new-trends-section h4{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 110px 0 95px 0;
+    font-weight: var(--weight-700);
+}
+
+.trends-div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.trend-product{
+    position: relative;
+    width: 400px;
+    margin-bottom: 280px;
+}
+
+.trend-img{
+    width: 100%;
+    height: 400px;
+}
+
+.trend-product a{
+    position: absolute;
+    transform: translate(50%, 50%);
+    left: -5px;
+    top: 180px;
+    background-color: #C4C4C4;
+    color: black;
+    border: 1px solid black;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-size: var(--size-1_5);
+    font-weight: var(--weight-600);
+    opacity: 0;
+}
+
+.trend-product:hover a{
+    opacity: 1;
+}
+
+.trend-product:hover .trend-img{
+    opacity: 70%;
+}
+
+.trand-name{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.trand-name p{
+    font-weight: var(--weight-700);
 }
 
 /* nike news page */
@@ -331,6 +469,374 @@ header nav .burger > div{
     margin: 0.3rem 0;
 }
 
+/* product page */
+.product-wrapper{
+    margin-bottom: 8rem;
+}
+
+.product-wrapper h1{
+    margin-bottom: 4rem;
+}
+
+.product-div{
+    display: flex;
+    gap: 10%;
+}
+
+/* product images div */
+.product-images{
+    display: grid;
+    grid-template-areas: 
+    'image1 image1 image2'
+    'image1 image1 image3'
+    'image4 image5 image6';
+    width: 50%;
+    gap: 1rem;
+}
+
+.small-img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.small-img:hover{
+    transform: scale(1.6);
+}
+
+.image1{
+    width: 100%;
+    height: 100%;
+    grid-area: image1;
+}
+
+.image2{
+    grid-area: image2;
+}
+
+.image3{
+    grid-area: image3;
+}
+
+.image4{
+    grid-area: image4;
+}
+
+.image5{
+    grid-area: image5;
+}
+
+.image6{
+    grid-area: image6;
+}
+
+/* product carousel */
+.product-carousel{
+    display: none;
+    width: 45%;
+    align-self: center;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--main-black);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: var(--main-white);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+/* product details div*/
+.product-details{
+    width: 45%;
+}
+
+.product-details p{
+    text-transform: capitalize;
+    text-align: start;
+    padding-bottom: .5rem;
+}
+
+.product-size{
+    font-size: var(--size-1_5);
+    font-weight: var(--weight-600);
+    padding-top: 1rem;
+}
+
+.product-size_div{
+    display: grid;
+    grid-template-areas: 
+    'size38 size39 size40'
+    'size41 size42 size43'
+    'size44 size45 size46';
+    gap: .25rem .5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.product-size_div div:hover{
+    background-color: #7b7b7b;
+    color: var(--main-white);
+    cursor: pointer;
+}
+
+.size38{
+    grid-area: size38;
+}
+
+.size39{
+    grid-area: size39;
+}
+
+.size40{
+    grid-area: size40;
+}
+
+.size41{
+    grid-area: size41;
+}
+
+.size342{
+    grid-area: size42;
+}
+
+.size43{
+    grid-area: size43;
+}
+
+.size44{
+    grid-area: size44;
+}
+
+.size45{
+    grid-area: size45;
+}
+
+.size46{
+    grid-area: size46;
+}
+
+.product-size_div > div{
+    border: 1px solid var(--main-black);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-open{
+    background-color: var(--main-black);
+    color: var(--main-white);
+    width: 100%;
+    padding: 25px 0;
+    border-radius: 10px;
+}
+
+.modal-wrapper{
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+}
+
+.modal-window{
+    position: relative;
+    width: 55%;
+    height: 55%;
+    background-color: var(--footer-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.modal-close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: .5s;
+    border-radius: 50%;
+    font-size: var(--size-1_5);
+}
+
+.modal-close:hover{
+    transform: scale(1.2);
+}
+
+.modal-header{
+    text-align: center;
+    font-size: var(--size-2);
+    font-weight: var(--weight-600);
+    margin-bottom: 1rem;
+}
+
+.modal-content{
+    max-height: 80%;
+    height: 60%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* modal content form */
+.modal-content form{
+    display: grid;
+    grid-template-areas: 
+    'fname lname'
+    'email email'
+    'password password'
+    'adress adress'
+    'card card'
+    'card-number card-number'
+    'exp-date cvc';
+    gap: 1rem 10px;
+}
+
+.fname{
+    grid-area: fname;
+}
+
+.lname{
+    grid-area: lname;
+}
+
+.email{
+    grid-area: email;
+}
+
+.password{
+    grid-area: password;
+}
+
+.adress{
+    grid-area: adress;
+}
+
+.user-card{
+    grid-area: card;
+    margin-top: 1rem;
+    font-size: var(--size-1_5);
+    font-weight: var(--weight-600);
+}
+
+.card-number{
+    grid-area: card-number;
+}
+
+.card-number > input{
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 25px;
+}
+
+.exp-date{
+    grid-area: exp-date;
+}
+
+.cvc{
+    grid-area: cvc;
+}
+
+.exp-date > input, .cvc > input{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 25px;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-info > label{
+    text-align: start;
+    margin:0 0 5px 5px;
+}
+
+.modal-content form > input{
+    padding: .5rem;
+    border: 1px solid var(--main-white);
+    border-radius: 10px;
+}
+
+.modal-content form > input::placeholder{
+    color: #9b9999;
+    text-transform: capitalize;
+}
+
+.modal-submit{
+    background-color: var(--main-black);
+    margin-top: 2rem;
+    font-size: var(--size-1_5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.modal-wrapper.active{
+    display: grid;
+}
+
 /* sign  in page */
 .sign_in-section{
     display: flex;
@@ -405,6 +911,8 @@ footer{
 
 /* responcive code */
 @media(max-width: 1400px){
+
+
     .news-img_div > img{
         width: 400px;
     }
@@ -423,6 +931,22 @@ footer{
 
     .categories{
         margin-top: 2rem;
+    }
+}
+
+@media(max-width: 1300px){
+    .trends-div{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .trend-product{
+        margin-bottom: 0;
+    }
+
+    .trend3{
+        margin-bottom: 280px;
     }
 }
 
@@ -489,6 +1013,8 @@ footer{
 }
 
 @media(max-width: 1140px){
+
+
     .news-img_div > img{
         width: 300px;
     }
@@ -515,6 +1041,13 @@ footer{
 
     .news-img_div > img{
         width: 100%;
+    }
+}
+
+@media(max-width: 991px){
+    .product-div{
+        justify-content: space-between;
+        gap: 0;
     }
 }
 
@@ -547,10 +1080,6 @@ footer{
         padding: 0;
     }
 
-    header nav img{
-        margin-left: 1.2rem;
-    }
-
     header nav .nav-links{
         display: none;
     }
@@ -561,11 +1090,12 @@ footer{
         width: 100%;
         align-items: center;
         gap: 2rem;
+        z-index: 1;
     }
 
     header nav .nav-links__active{
         background-color: var(--main-black);
-        height: 155px;
+        height: 170px;
         position: absolute;
         padding: 2rem 0;
     }
@@ -588,6 +1118,7 @@ footer{
         display: block;
         top: 2rem;
         right: 1rem;
+        z-index: 1;
     }
 
     header nav .nav-burger__active > div{
@@ -612,9 +1143,31 @@ footer{
     }*/
 
     /* product section */
+    .motto img{
+        width: 15%;
+    }
+
+    .motto p{
+        font-size: var(--size-1_5);
+    }
+
+    .two-hundred{
+        font-size: var(--size-1_5);
+    }
+
     .shoes{
         gap: 1.5rem;
     }
+
+    /* product page */
+    .product-images{
+        display: none;
+    }
+
+    .product-carousel{
+        display: inline-block;
+    }
+
 }
 
 @media(max-width: 745px){
@@ -625,6 +1178,10 @@ footer{
 }
 
 @media(max-width: 631px){
+    .home-title img{
+        margin-bottom: 20px;
+    }
+
     .product-nav{
         align-items: flex-start;
         flex-direction: column;
@@ -676,6 +1233,30 @@ footer{
         transform: rotateZ(-45deg) translateY(-13px);
     }
 
+    /* product page */
+    .modal-window{
+        height: 63%;
+    }
+
+    .modal-content form{
+        display: grid;
+        grid-template-areas: 
+        'fname'
+        'lname'
+        'email'
+        'password'
+        'adress'
+        'card'
+        'card-number'
+        'exp-date'
+        'cvc';
+    }
+
+    .modal-submit{
+        margin-top: 1rem;
+    }
+
+    /* sign in page */
     .sign_in-section{
         flex-direction: column;
     }
@@ -693,7 +1274,129 @@ footer{
     }
 }
 
+@media(max-width: 570px){
+    .product-size_div{
+        grid-template-areas: 
+        'size38 size39'
+        'size40 size41'
+        'size42 size43'
+        'size44 size45'
+        'size46 size0';
+    }
+
+    .size38{
+        grid-area: size38;
+    }
+    
+    .size39{
+        grid-area: size39;
+    }
+    
+    .size40{
+        grid-area: size40;
+    }
+    
+    .size41{
+        grid-area: size41;
+    }
+    
+    .size342{
+        grid-area: size42;
+    }
+    
+    .size43{
+        grid-area: size43;
+    }
+    
+    .size44{
+        grid-area: size44;
+    }
+    
+    .size45{
+        grid-area: size45;
+    }
+    
+    .size46{
+        grid-area: size46;
+    }
+    
+    
+}
+
+@media(max-width: 560px){
+    .special-offer-section h2{
+        font-size: 48px;
+    }
+
+    .special-offer-section p{
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 480px){
+    .trend-product{
+        width: 350px;
+    }
+
+    .trend-img{
+        height: 350px;
+    }
+
+    .trend-product a{
+        left: -35px;
+        top: 150px;
+    }
+
+    /* product page*/
+    .product-div{
+        flex-direction: column;
+        align-items: center;
+        grid-area: 2rem;
+    }
+
+    .product-carousel{
+        width: 100%;
+    }
+
+    .product-details{
+        width: 100%;
+    }
+}
+
+@media(max-width:440px){
+    .special-offer-section h2{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 416px){
+    .modal-window{
+        height: 67%;
+    }
+}
+
 @media(max-width: 400px){
+    .motto p{
+        font-size: 1rem;
+    }
+
+    .two-hundred{
+        font-size: 1rem;
+    }
+
+    .trend-product{
+        width: 300px;
+    }
+
+    .trend-img{
+        height: 300px;
+    }
+
+    .trend-product a{
+        left: -60px;
+        top: 120px
+    }
+
     footer .container{
         display: flex;
         gap: 4rem;
@@ -715,4 +1418,29 @@ footer{
     .shoes-div{
         width: 250px;
     }
+}
+
+@media(max-width: 320px){
+    .trend-product{
+        width: 260px;
+    }
+
+    .trend-img{
+        height: 260px;
+    }
+
+    .trend-product a{
+        left: -80px;
+        top: 90px;
+    }
+}
+
+@media(max-width: 284px){
+    .home-title_button button{
+        margin-right: 15px;
+    }
+}
+
+.c{
+    background-color: #717171;
 }

@@ -9,11 +9,20 @@
     <title>Nike clothes</title>
 </head>
 <body class="black-body">
+    <!-- page header -->
     <header>
         <div class="container active-container">
             <nav class="nav nav__active">
                 <a href="index.html">
-                    <img src="assets/images/header_images/nike_logo.png" alt="nikelogo">
+                    <svg width="64px" height="64px" viewBox="0 0 192.76 192.76" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)" stroke="#ffffff" stroke-width="0.00192756">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.38551199999999997"/>
+                        
+                        <g id="SVGRepo_iconCarrier"> <g fill-rule="evenodd" clip-rule="evenodd"> <path fill="#000000" d="M0 0h192.756v192.756H0V0z"/> <path d="M42.741 71.477c-9.881 11.604-19.355 25.994-19.45 36.75-.037 4.047 1.255 7.58 4.354 10.256 4.46 3.854 9.374 5.213 14.264 5.221 7.146.01 14.242-2.873 19.798-5.096 9.357-3.742 112.79-48.659 112.79-48.659.998-.5.811-1.123-.438-.812-.504.126-112.603 30.505-112.603 30.505a24.771 24.771 0 0 1-6.524.934c-8.615.051-16.281-4.731-16.219-14.808.024-3.943 1.231-8.698 4.028-14.291z"/> </g> </g>
+                        
+                    </svg>
                 </a>
                 <ul class="nav-links nav-links__active white-text">
                     <li>
@@ -52,9 +61,68 @@
             </nav>
         </div>
     </header>
+
+    <!-- page main content -->
     <main>
-        hello world
+            <section class="home-title-section">
+                <div class="home-title">
+                    <img src="assets/images/home_page/home_page_title.png" alt="air_max">
+                </div>
+                <div class="motto">
+                    <img src="assets/images/home_page/nike_logo_red.png" alt="nike_logo">
+                    <p class="white-text">just <span>do</span> it</p>
+                </div>
+                <div class="air-max-plus">
+                    <p class="white-text">nike air max plus</p>
+                    <p class="white-text">man's shoes</p>
+                    <p class="white-text two-hundred">200 $</p>
+                </div>
+                <div class="home-title_button">
+                    <button class="white-text">buy now</button>
+                    <button class="white-text">favorite</button>
+                </div>
+            </section>
+            <section class="special-offer-section">
+                <h2 class="white-text">-25% on your favorite looks</h2>
+                <p class="white-text">for nike members only</p>
+                <button>buy now</button>
+            </section>
+            <section class="new-trends-section container">
+                <h4 class="white-text">trend of the moment</h4>
+                <div class="trends-div">
+                    <div class="trend-product trend1">
+                        <img class="trend-img" src="assets/images/home_page/air_force1.png" alt="air_force">
+                        <a href="#">see details</a>
+                        <div class="trand-name">
+                            <h5 class="white-text">air force 1.07</h5>
+                            <p class="white-text">70$</p>
+                            <img class="heart" src="assets/icons/product_icons/heart 1.png" alt="heart_icon">
+                        </div>
+                    </div>
+                    <div class="trend-product trend2">
+                        <img class="trend-img" src="assets/images/home_page/air_force1.png" alt="air_force">
+                        <a href="#">see details</a>
+                        <div class="trand-name">
+                            <h5 class="white-text">air force 1.07</h5>
+                            <p class="white-text">70$</p>
+                            <img class="heart" src="assets/icons/product_icons/heart 1.png" alt="heart_icon">
+                        </div>
+                    </div>
+                    <div class="trend-product trend3">
+                        <img class="trend-img" src="assets/images/home_page/air_force1.png" alt="air_force">
+                        <a href="#">see details</a>
+                        <div class="trand-name">
+                            <h5 class="white-text">air force 1.07</h5>
+                            <p class="white-text">70$</p>
+                            <img class="heart" src="assets/icons/product_icons/heart 1.png" alt="heart_icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section></section>
     </main>
+
+    <!-- page footer -->
     <footer>
         <div class="container">
             <div class="footer-icons">
@@ -108,12 +176,14 @@
         </div>
     </footer>
 
+    <!-- scroll top button -->
     <button id="scroll-top" class="scroll-top__active">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
     </button>
 
+    <!-- javascript link-->
     <script src="assets/js/app.js"></script>
 </body>
 </html>
