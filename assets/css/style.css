@@ -6,6 +6,9 @@
     --weight-700: 700;
     --size-1_5: 1.5rem;
     --size-2: 2rem;
+    --width-100: 100%;
+    --height-25: 25px;
+    --height-100: 100%;
 }
 
 .black-body{
@@ -49,13 +52,17 @@
     margin: 1.5rem;
 }
 
+.white-heart{
+    cursor: pointer;
+}
+
 .container{
     width: 95%;
     margin: 0 auto;
 }
 
 .scroll-top__active{
-    background: #3a3a3a;
+    background-color: #3a3a3a;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -68,6 +75,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.shoes-div a,
+.trend-product a{
+    position: absolute;
+    transform: translate(50%, 50%);
+    background-color: #C4C4C4;
+    color: var(--main-black);
+    border: 1px solid black;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-size: var(--size-1_5);
+    font-weight: var(--weight-600);
+    opacity: 0;
 }
 
 /* header */
@@ -86,8 +107,8 @@ header nav  .nav-links{
     display: flex;
     list-style: none;
     justify-content: space-between;
-    min-width: 40%;
-    height: 25px;
+    min-width: 45%;
+    height: var(--height-25);
 }
 
 .nav-links a{
@@ -114,9 +135,18 @@ header nav .burger > div{
     margin: 0.3rem 0;
 }
 
+.black-body header nav .burger > div{
+    background-color: var(--main-white);
+}
+
 .nav-icons{
     display: flex;
     gap: 1.5rem;
+    align-items: center;
+}
+
+.shopping-bag{
+    cursor: pointer;
 }
 
 .search-form{
@@ -131,9 +161,10 @@ header nav .burger > div{
 
 .search-form svg{
     position: absolute;
-    right: 10px;
-    top: -1px;
+    right: -10px;
+    top: -47px;
     transform: translateY(50%);
+    cursor: pointer;
 }
 
 /* home page */
@@ -144,7 +175,7 @@ header nav .burger > div{
 }
 
 .home-title img{
-    width: 100%;
+    width: var(--width-100);
 }
 
 .motto{
@@ -189,7 +220,8 @@ header nav .burger > div{
 /* special offer section */
 .special-offer-section{
     background-image: url(../images/home_page/Rectangle\ 114.png);
-    width: 100%;
+    width: var(--width-100);
+    background-repeat: no-repeat;
     height: 812px;
     text-align: center;
 }
@@ -226,7 +258,7 @@ header nav .burger > div{
 
 .trends-div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -237,23 +269,13 @@ header nav .burger > div{
 }
 
 .trend-img{
-    width: 100%;
+    width: var(--width-100);
     height: 400px;
 }
 
 .trend-product a{
-    position: absolute;
-    transform: translate(50%, 50%);
     left: -5px;
     top: 180px;
-    background-color: #C4C4C4;
-    color: black;
-    border: 1px solid black;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    font-size: var(--size-1_5);
-    font-weight: var(--weight-600);
-    opacity: 0;
 }
 
 .trend-product:hover a{
@@ -264,14 +286,21 @@ header nav .burger > div{
     opacity: 70%;
 }
 
-.trand-name{
+.trend-name{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.trand-name p{
+.trend-name p{
     font-weight: var(--weight-700);
+}
+
+.trend-name svg{
+    position: absolute;
+    bottom: 360px;
+    left: 330px;
 }
 
 /* nike news page */
@@ -403,24 +432,14 @@ header nav .burger > div{
 }
 
 .product-img{
-    width: 100%;
+    width: var(--width-100);
     height: 300px;
     border-radius: 10px;
 }
 
 .shoes-div a{
-    position: absolute;
-    transform: translate(50%, 50%);
     left: -60px;
     top: 105px;
-    background-color: #C4C4C4;
-    color: black;
-    border: 1px solid black;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    font-size: var(--size-1_5);
-    font-weight: var(--weight-600);
-    opacity: 0;
 }
 
 .shoes-div:hover .product-img{
@@ -429,6 +448,12 @@ header nav .burger > div{
 
 .shoes-div:hover a{
     opacity: 1;
+}
+
+.shoes-div svg{
+    position: absolute;
+    top: 10px;
+    left: 230px;
 }
 
 .product-name{ 
@@ -495,8 +520,8 @@ header nav .burger > div{
 }
 
 .small-img{
-    width: 100%;
-    height: 100%;
+    width: var(--width-100);
+    height: var(--height-100);
     transition: .5s;
 }
 
@@ -505,8 +530,8 @@ header nav .burger > div{
 }
 
 .image1{
-    width: 100%;
-    height: 100%;
+    width: var(--width-100);
+    height: var(--height-100);
     grid-area: image1;
 }
 
@@ -537,20 +562,18 @@ header nav .burger > div{
     align-self: center;
 }
 
-.slideshow-container {
+.slideshow-container{
     max-width: 1000px;
     position: relative;
     margin: auto;
   }
   
   /* Next & previous buttons */
-  .prev, .next {
+  .prev, .next{
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: auto;
-    padding: 16px;
-    margin-top: -22px;
     color: var(--main-black);
     font-weight: bold;
     font-size: 18px;
@@ -558,21 +581,23 @@ header nav .burger > div{
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
+
+  .prev{
+    right: 73%;
+  }
   
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
+  .next{
+    left: 73%;
     border-radius: 3px 0 0 3px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+  .prev:hover, .next:hover{
     background-color: rgba(0,0,0,0.8);
-    color: var(--main-white);
   }
   
   /* Number text (1/3 etc) */
-  .numbertext {
+  .numbertext{
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
@@ -581,7 +606,7 @@ header nav .burger > div{
   }
   
   /* The dots/bullets/indicators */
-  .dot {
+  .dot{
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -593,18 +618,18 @@ header nav .burger > div{
   }
   
   /* Fading animation */
-  .fade {
+  .fade{
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
-  @keyframes fade {
+  @keyframes fade{
     from {opacity: .4} 
     to {opacity: 1}
   }
   
   /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 300px){
     .prev, .next,.text {font-size: 11px}
   }
 
@@ -688,7 +713,7 @@ header nav .burger > div{
 .modal-open{
     background-color: var(--main-black);
     color: var(--main-white);
-    width: 100%;
+    width: var(--width-100);
     padding: 25px 0;
     border-radius: 10px;
 }
@@ -703,7 +728,6 @@ header nav .burger > div{
 .modal-window{
     position: relative;
     width: 55%;
-    height: 55%;
     background-color: var(--footer-gray);
     padding: 2rem;
     border-radius: 1rem;
@@ -785,7 +809,7 @@ header nav .burger > div{
     padding: 0.5rem;
     border: 1px solid white;
     border-radius: 10px;
-    height: 25px;
+    height: var(--height-25);
 }
 
 .exp-date{
@@ -800,7 +824,7 @@ header nav .burger > div{
     padding: 0.5rem;
     border-radius: 10px;
     border: 1px solid white;
-    height: 25px;
+    height: var(--height-25);
 }
 
 .card-info{
@@ -846,7 +870,6 @@ header nav .burger > div{
 
 .log_in{
     border: 1px solid var(--main-white);
-    width: 49.5%;
     text-align: center;
     padding-top: 2rem;
 }
@@ -859,7 +882,7 @@ header nav .burger > div{
 }
 
 .log_in p{
-    padding: 0 17%;
+    padding: 4rem 17% 1rem 17%;
 }
 
 .log_in form{
@@ -867,6 +890,7 @@ header nav .burger > div{
     flex-direction: column;
     align-items: center;
     margin: 35px 0 120px 0;
+    gap: 3rem;
 }
 
 .log_in form input{
@@ -882,8 +906,16 @@ header nav .burger > div{
     text-transform: uppercase;
 }
 
-.sign_in-img{
+.sign_in-img,
+.log_in{
     width: 49.5%;
+}
+
+.sign-in_subbmit{
+    border: 1px solid var(--main-white);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: var(--size-2);
 }
 
 /* footer */
@@ -901,546 +933,10 @@ footer{
 .footer-nav ul{
     display: flex;
     justify-content: space-around;
-    padding: 4rem 0;
+    padding: 5.5rem 0;
 }
 
 .footer-nav li a{
     text-transform: uppercase;
     color: var(--main-black);
-}
-
-/* responcive code */
-@media(max-width: 1400px){
-
-
-    .news-img_div > img{
-        width: 400px;
-    }
-}
-
-@media(max-width: 1340px){
-    .product-section{
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .product-nav ul{
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .categories{
-        margin-top: 2rem;
-    }
-}
-
-@media(max-width: 1300px){
-    .trends-div{
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .trend-product{
-        margin-bottom: 0;
-    }
-
-    .trend3{
-        margin-bottom: 280px;
-    }
-}
-
-@media(max-width: 1250px){
-    .news-div p{
-        margin: 5rem 10rem;
-    }
-
-    .news-img_div > img{
-        width: 350px;
-    }
-
-    .footer-nav ul{
-        display: grid;
-        grid-template-areas: 
-        'contact conditions'
-        'faq gift'
-        'store help'
-        'privacy about'
-        'cookies me';
-        gap: 1rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .footer-contact{
-        grid-area: contact;
-    }
-
-    .footer-faq{
-        grid-area: faq;
-    }
-
-    .footer-store{
-        grid-area: store;
-    }
-
-    .footer-privacy{
-        grid-area: privacy;
-    }
-
-    .footer-cookies{
-        grid-area: cookies;
-    }
-
-    .footer-conditions{
-        grid-area: conditions;
-    }
-
-    .footer-gift{
-        grid-area: gift;
-    }
-
-    .footer-help{
-        grid-area: help;
-    }
-
-    .footer-about{
-        grid-area: about;
-    }
-
-    .me{
-        grid-area: me;
-    }
-}
-
-@media(max-width: 1140px){
-
-
-    .news-img_div > img{
-        width: 300px;
-    }
-
-    .shoes{
-        display: grid;
-        grid-template-areas: 
-        'peoduct0 product2'
-        'product3 product4'
-        'product5 product6'
-        'product7 product8'
-        'product9 product1';
-    }
-}
-
-@media(max-width: 1000px){
-    .news-div p{
-        margin: 5rem 3rem;
-    }
-
-    .news-img_div{
-        flex-direction: column;
-    }
-
-    .news-img_div > img{
-        width: 100%;
-    }
-}
-
-@media(max-width: 991px){
-    .product-div{
-        justify-content: space-between;
-        gap: 0;
-    }
-}
-
-@media(max-width: 900px){
-    .news-div p{
-        margin: 5rem 0;
-    }
-
-    .news-div > img{
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        width: 90%;
-    }
-
-    .active-container{
-        width: 100%;
-    }
-
-    header nav{
-        align-items: flex-start;
-        flex-direction: column;
-        position: relative;
-    }
-    
-    header .nav__active{
-        padding: 0;
-    }
-
-    header nav .nav-links{
-        display: none;
-    }
-
-    header nav .nav-links.nav-links__active{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        gap: 2rem;
-        z-index: 1;
-    }
-
-    header nav .nav-links__active{
-        background-color: var(--main-black);
-        height: 170px;
-        position: absolute;
-        padding: 2rem 0;
-    }
-
-    header nav .nav-links li{
-        width: 100%;
-        text-align: center;
-    }
-
-    header nav .nav-links li a{
-        color: var(--main-white);
-    }
-    
-    .nav-icons{
-        display: none;
-    }
-
-    header nav .burger{
-        position: absolute;
-        display: block;
-        top: 2rem;
-        right: 1rem;
-        z-index: 1;
-    }
-
-    header nav .nav-burger__active > div{
-        background-color: var(--main-white);
-        transition: transform 0.2s ease;
-    }
-
-    header nav .nav-burger__active div:nth-child(1){
-        transform: rotateZ(45deg) translateY(13px);
-    }
-
-    header nav .nav-burger__active div:nth-child(2){
-        opacity: 0;
-    }
-
-    header nav .nav-burger__active div:nth-child(3){
-        transform: rotateZ(-45deg) translateY(-13px);
-    }
-
-   /* .search-form__active{
-       
-    }*/
-
-    /* product section */
-    .motto img{
-        width: 15%;
-    }
-
-    .motto p{
-        font-size: var(--size-1_5);
-    }
-
-    .two-hundred{
-        font-size: var(--size-1_5);
-    }
-
-    .shoes{
-        gap: 1.5rem;
-    }
-
-    /* product page */
-    .product-images{
-        display: none;
-    }
-
-    .product-carousel{
-        display: inline-block;
-    }
-
-}
-
-@media(max-width: 745px){
-    .shoes{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media(max-width: 631px){
-    .home-title img{
-        margin-bottom: 20px;
-    }
-
-    .product-nav{
-        align-items: flex-start;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .product-ul li{
-        display: none;
-    }
-
-    main .product-ul.product-ul__active{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .product-ul__active{
-        position: absolute;
-        padding: 2rem 0;
-    }
-
-    .product-ul__active li{
-        width: 100%;
-        text-align: center;
-    }
-
-    .product-burger{
-        position: absolute;
-        display: block;
-        top: -0.1rem;
-        right: 1rem;
-    }
-
-    .product-burger__active > div{
-        transition: transform 0.2s ease;
-    }
-
-    .product-burger__active div:nth-child(1){
-        transform: rotateZ(45deg) translateY(13px);
-    }
-
-    .product-burger__active div:nth-child(2){
-        opacity: 0;
-    }
-
-    .product-burger__active div:nth-child(3){
-        transform: rotateZ(-45deg) translateY(-13px);
-    }
-
-    /* product page */
-    .modal-window{
-        height: 63%;
-    }
-
-    .modal-content form{
-        display: grid;
-        grid-template-areas: 
-        'fname'
-        'lname'
-        'email'
-        'password'
-        'adress'
-        'card'
-        'card-number'
-        'exp-date'
-        'cvc';
-    }
-
-    .modal-submit{
-        margin-top: 1rem;
-    }
-
-    /* sign in page */
-    .sign_in-section{
-        flex-direction: column;
-    }
-
-    .log_in{
-        width: 100%;
-    }
-
-    .log_in h1{
-        font-size: var(--size-1_5);
-    }
-
-    .sign_in-img{
-        display: none;
-    }
-}
-
-@media(max-width: 570px){
-    .product-size_div{
-        grid-template-areas: 
-        'size38 size39'
-        'size40 size41'
-        'size42 size43'
-        'size44 size45'
-        'size46 size0';
-    }
-
-    .size38{
-        grid-area: size38;
-    }
-    
-    .size39{
-        grid-area: size39;
-    }
-    
-    .size40{
-        grid-area: size40;
-    }
-    
-    .size41{
-        grid-area: size41;
-    }
-    
-    .size342{
-        grid-area: size42;
-    }
-    
-    .size43{
-        grid-area: size43;
-    }
-    
-    .size44{
-        grid-area: size44;
-    }
-    
-    .size45{
-        grid-area: size45;
-    }
-    
-    .size46{
-        grid-area: size46;
-    }
-    
-    
-}
-
-@media(max-width: 560px){
-    .special-offer-section h2{
-        font-size: 48px;
-    }
-
-    .special-offer-section p{
-        font-size: 26px;
-    }
-}
-
-@media(max-width: 480px){
-    .trend-product{
-        width: 350px;
-    }
-
-    .trend-img{
-        height: 350px;
-    }
-
-    .trend-product a{
-        left: -35px;
-        top: 150px;
-    }
-
-    /* product page*/
-    .product-div{
-        flex-direction: column;
-        align-items: center;
-        grid-area: 2rem;
-    }
-
-    .product-carousel{
-        width: 100%;
-    }
-
-    .product-details{
-        width: 100%;
-    }
-}
-
-@media(max-width:440px){
-    .special-offer-section h2{
-        font-size: 2rem;
-    }
-}
-
-@media(max-width: 416px){
-    .modal-window{
-        height: 67%;
-    }
-}
-
-@media(max-width: 400px){
-    .motto p{
-        font-size: 1rem;
-    }
-
-    .two-hundred{
-        font-size: 1rem;
-    }
-
-    .trend-product{
-        width: 300px;
-    }
-
-    .trend-img{
-        height: 300px;
-    }
-
-    .trend-product a{
-        left: -60px;
-        top: 120px
-    }
-
-    footer .container{
-        display: flex;
-        gap: 4rem;
-    }
-
-    .footer-icons{
-        flex-direction: column;
-    }
-
-    .footer-nav ul{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 3rem;
-    }
-}
-
-@media(max-width: 345px){
-    .shoes-div{
-        width: 250px;
-    }
-}
-
-@media(max-width: 320px){
-    .trend-product{
-        width: 260px;
-    }
-
-    .trend-img{
-        height: 260px;
-    }
-
-    .trend-product a{
-        left: -80px;
-        top: 90px;
-    }
-}
-
-@media(max-width: 284px){
-    .home-title_button button{
-        margin-right: 15px;
-    }
-}
-
-.c{
-    background-color: #717171;
 }
