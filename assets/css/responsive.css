@@ -150,6 +150,12 @@
     }
 }
 
+@media(max-width: 1090px){
+    .special-offer-section h2{
+        font-size: 3.5rem;
+    }
+}
+
 @media(max-width: 1000px){
     .news-div p{
         margin: 5rem 3rem;
@@ -189,6 +195,12 @@
     }
 }
 
+@media(max-width: 930px){
+    .special-offer-section h2{
+        font-size: 3rem;
+    }
+}
+
 @media(max-width: 900px){
     .news-div p{
         margin: 5rem 0;
@@ -200,6 +212,10 @@
 }
 
 @media(max-width: 815px){
+    .special-offer-section h2{
+        font-size: 2.5rem;
+    }
+
     .trends-div{
         display: flex;
         flex-direction: column;
@@ -304,17 +320,25 @@
         transform: rotateZ(-45deg) translateY(-13px);
     }
 
-   /* .search-form__active{
-       
-    }*/
-
-    /* product section */
+    /* home page */
     .motto img{
         width: 15%;
     }
 
     .motto p{
         font-size: var(--size-1_5);
+    }
+
+    .special-offer-section{
+        margin-bottom: 935px;
+    }
+
+    .yellow-logo{
+        display: none;
+    }
+
+    .grey-logo{
+        display: inline-block;
     }
 
     .two-hundred{
@@ -334,12 +358,30 @@
         display: inline-block;
     }
 
+    /* sign in page */
+    .sign_in-img{
+        display: none;
+    }
+
+    .log_in{
+        width: 100%;
+    }
 }
 
 @media(max-width: 745px){
     .shoes{
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media(max-width: 675px){
+    .special-offer-section h2{
+        font-size: 2rem;
+    }
+
+    .special-offer-section p{
+        font-size: 1.5rem;
     }
 }
 
@@ -427,6 +469,7 @@
 
     .modal-submit{
         margin-top: 1rem;
+        grid-column: 1/2;
     }
 
     /* sign in page */
@@ -448,6 +491,10 @@
 }
 
 @media(max-width: 570px){
+    .special-offer-section h2{
+        font-size: 1.5rem;
+    }
+
     .product-size_div{
         grid-template-areas: 
         'size38 size39'
@@ -497,14 +544,6 @@
 }
 
 @media(max-width: 560px){
-    .special-offer-section h2{
-        font-size: 48px;
-    }
-
-    .special-offer-section p{
-        font-size: 26px;
-    }
-
     .product-section{
         gap: 2rem;
     }
@@ -592,6 +631,19 @@
 }
 
 @media(max-width: 400px){
+    .grey-logo{
+        display: none;
+    }
+
+    .third-logo{
+        display: inline-block;
+    }
+
+    .special-offer-section p,
+    .special-offer-section h2{
+        color: rgb(226, 0, 0);
+    }
+
     .motto p{
         font-size: 1rem;
     }
